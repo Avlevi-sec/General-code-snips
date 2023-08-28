@@ -3,8 +3,8 @@ from keepercommander.commands.enterprise import UserReportCommand, SecurityAudit
 from keepercommander.params import KeeperParams
 
 my_params = KeeperParams()
-my_params.user = "avihay.levi@outseer.com"
-my_params.password = "xbi_:sgqr.hM8HBa"
+my_params.user = "user@company.com"
+my_params.password = password"
 
 api.login(my_params)
 api.sync_down(my_params)
