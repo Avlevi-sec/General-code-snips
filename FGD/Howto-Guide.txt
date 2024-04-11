@@ -1,0 +1,13 @@
+The following folder contains all of the files you need to docker build a new discord bot python code that triggers a screenshot of the fear & greed CNN site and sends it to your private channel.
+
+Guide:
+1. setup a bot with read/write permissions (its easy, look for a generic YT video and you are done)
+2. invite that bot to a channel you own
+3. donwload the FGD folder and run "docker build -t my_discord_bot ." to build the image.
+4. pull and run the selenium image (there are lots of errors over in docker trying to run chromedriver locally so using selenium docker app is better).
+"docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" selenium/standalone-chrome:latest"
+5. run the discord bot image, "docker run -it my_discord_bot".
+you can also run it interactively to run the code manually and debug issues, "docker run -it my_discord_bot /bin/bash"
+6. Let it run via your local machine, cloud node or anything quite literally.
+
+*Important: inside the python script there is a default IP & PORT defined for the remote webdriver usage so check under http://[HOST]:4444/ui/ what is the IP of the running chromedriver session and change it if needed.*
