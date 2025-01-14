@@ -1,3 +1,5 @@
+#Using Google's API, calculating the nearst place to location X in order to pick the closest place I need (good for pickup locations, places to hangout etc.)
+
 import requests
 from bidi.algorithm import get_display # For correct RTL display
 
